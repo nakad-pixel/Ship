@@ -136,6 +136,12 @@ export class Game {
       // Initialize ocean
       await this.oceanSystem.init();
 
+      // Hide loading screen
+      const loadingScreen = document.getElementById('loading-screen');
+      if (loadingScreen) {
+        loadingScreen.style.display = 'none';
+      }
+
       // Setup lighting
       this.setupLighting();
 
